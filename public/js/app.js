@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         message1.textContent = 'Loading...';
         const location = document.getElementById('address');
     
-        fetch('http://localhost:3000/weather?address=' + location.value).then((response) => {
+        fetch('/weather?address=' + location.value).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     console.log('Error : ', data.error);
